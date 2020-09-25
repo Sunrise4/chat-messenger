@@ -16,13 +16,13 @@ export default function NewConversationsModal({ closeModal }) {
   }
 
   function handleCheckboxChange(contactId) {
-    setSelectedContactIds((prevSelectedConractIds) => {
-      if (prevSelectedConractIds.includes(contactId)) {
-        return prevSelectedConractIds.filter((prevId) => {
+    setSelectedContactIds((prevSelectedContactIds) => {
+      if (prevSelectedContactIds.includes(contactId)) {
+        return prevSelectedContactIds.filter((prevId) => {
           return contactId !== prevId;
         });
       } else {
-        return [...prevSelectedConractIds, contactId];
+        return [...prevSelectedContactIds, contactId];
       }
     });
   }
